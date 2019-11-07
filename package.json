@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/dendimaniac/NodeServer/issues"
   },
-  "homepage": "https://github.com/dendimaniac/NodeServer#readme"
+  "homepage": "https://github.com/dendimaniac/NodeServer#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
