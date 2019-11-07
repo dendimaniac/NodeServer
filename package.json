@@ -1,0 +1,24 @@
+{
+  "name": "nodeserver",
+  "version": "1.0.0",
+  "description": "Using node to create an express server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dendimaniac/NodeServer.git"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "npm"
+  ],
+  "author": "Quan Dao",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/dendimaniac/NodeServer/issues"
+  },
+  "homepage": "https://github.com/dendimaniac/NodeServer#readme"
+}
