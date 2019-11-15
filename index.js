@@ -17,8 +17,7 @@ app.get('/animal', async (req, res) => {
         console.log(e);
         res.send('db error :(');
     }
-})
-;
+});
 
 app.get('/', (req, res) => {
     res.send('Hello from my Node Server');
