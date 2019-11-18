@@ -6,9 +6,17 @@
 </head>
 <body>
 <h1>This is html public folder</h1>
-<form action="/animal">
+<h2>Get all</h2>
+<a href="/animals">Get all</a>
+<h2>Search</h2>
+<form action="/animal" method="get">
     <input type="text" name="name" placeholder="dog">
     <input type="submit" value="search">
+</form>
+<h2>Insert</h2>
+<form action="/animal" method="post">
+    <input type="text" name="name" placeholder="frog">
+    <input type="submit" value="Insert">
 </form>
 </body>
 </html>
