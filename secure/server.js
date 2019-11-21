@@ -5,9 +5,10 @@ module.exports = (app) => {
 
     app.use((req, res, next) => {
         if (req.secure) {
-            console.log('arriving here?')
+            console.log('secure? nothing todo then next')
             next();
         } else {
+            console.log('not secure? redirect');
             res.redirect(301, `https://${req.headers.host}/app${req.url}`);
         }
     });
