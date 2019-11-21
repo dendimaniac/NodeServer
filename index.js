@@ -11,7 +11,7 @@ if (process.env.SERVER === 'dev_localhost') {
 } else {
     require('./secure/server')(app);
     app.listen(process.env.HTTPS_PORT, () => {
-        console.log('Server app start?');
+        console.log(`Server app start on port ${process.env.HTTPS_PORT}`);
     });
 }
 
