@@ -8,10 +8,10 @@ const options = {
 };
 
 module.exports = (app) => {
-    https.createServer(options, app).listen(8000);
+    https.createServer(options, app).listen(process.env.HTTPS_PORT);
 
     http.createServer((req, res) => {
         res.writeHead(301, {'Location': 'https://localhost:8000' + req.url});
         res.end();
-    }).listen(3000);
+    }).listen(process.env.HTTP_PORT);
 };
