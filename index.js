@@ -5,6 +5,16 @@ const connection = require('./model/db');
 const animal = require('./model/animal');
 
 const app = express();
+
+if (process.env.SERVER === 'dev_localhost') {
+    require('./secure/localhost')(app);
+} else {
+    require('./secure/server')(app);
+    app.listen(3000, () => {
+        console.log('Server app start?');
+    });
+}
+
 const bodyParser = require('body-parser');
 
 app.use(express.static('public'));
@@ -45,8 +55,4 @@ app.get('/', (req, res) => {
 app.get('/demo', (req, res) => {
     console.log('request', req);
     res.send('demo');
-});
-
-app.listen(3000, () => {
-    console.log('Server app start?');
 });

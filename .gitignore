@@ -62,3 +62,8 @@ typings/
 
 #webstorm folders
 .idea/*
+
+#HTTPS
+*.crt
+*.csr
+*.key
