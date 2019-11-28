@@ -9,10 +9,9 @@ const app = express();
 if (process.env.SERVER === 'dev_localhost') {
     require('./secure/localhost')(app);
 } else {
-    //require('./secure/server')(app);
-    app.enable('trust proxy');
-    app.listen(process.env.HTTPS_PORT, () => {
-        console.log(`Server app start on port ${process.env.HTTPS_PORT}`);
+    require('./secure/server')(app);
+    app.listen(process.env.HTTP_PORT, () => {
+        console.log(`Server app start on port ${process.env.HTTP_PORT}`);
     });
 }
 

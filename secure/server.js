@@ -5,7 +5,7 @@ module.exports = (app) => {
 
     app.use((req, res, next) => {
         if (req.secure) {
-            console.log('secure? nothing todo then next')
+            console.log('secure? nothing todo then next');
             next();
         } else {
             console.log('not secure? redirect');
